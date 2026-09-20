@@ -20,3 +20,8 @@ export const fetchLukeSkywalker = async (): Promise<LukeSkywalker> => {
   //cast the data to LukeSkywalker
   return data as LukeSkywalker;
 };
+
+const matt = {} as LukeSkywalker
+
+//Error 
+//const matt: LukeSkywalker = {}
