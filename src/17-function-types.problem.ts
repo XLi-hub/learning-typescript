@@ -1,9 +1,12 @@
+import { boolean } from "zod";
 import { Equal, Expect } from "./helpers/type-utils";
 
 /**
  * How do we type onFocusChange?
  */
-const addListener = (onFocusChange: unknown) => {
+type focusListener = (isFocused:boolean) => void
+
+const addListener = (onFocusChange: focusListener) => {
   window.addEventListener("focus", () => {
     onFocusChange(true);
   });
